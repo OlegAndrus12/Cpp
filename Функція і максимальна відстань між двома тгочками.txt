@@ -1,0 +1,48 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+double length(double x, double y, double x1, double y1);
+
+
+int main() 
+{
+	int n;
+	cout << "Enter n" << endl;
+	cin >> n;
+	double *Ox = new double[n];
+	double*Oy = new double[n];
+	for (int i = 0;i < n;++i)
+	{
+		cin >> Ox[i]>> Oy[i]; 
+		cout << endl;
+
+	}
+	double maxlength = 0;
+	int k = 0;
+	int k1 = 0;
+	for (int i = 0;i < n;++i)
+	{
+		for (int j = 0;j < n;++j)
+		{
+			if (maxlength < length(Ox[i], Oy[j], Ox[j], Oy[i]))
+			{
+				maxlength = length(Ox[i], Oy[j], Ox[j], Oy[i]);
+				k = i;
+				k1 = j;
+			}
+		}
+	}
+
+		cout << "k = " << k << " k1 = " << k1 << endl;
+	
+	
+	system("pause");
+	return 0;
+}
+
+double length(double x, double y, double x1, double y1)
+{
+	double result = sqrt(pow((x - x1), 2) + pow((y - y1), 2));
+	return result;
+}

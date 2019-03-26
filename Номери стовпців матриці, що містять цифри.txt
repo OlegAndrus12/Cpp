@@ -1,0 +1,48 @@
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+void main()
+{
+	int n, m;
+	cout << "Enter m" << endl;
+		cin >> m;
+	cout<<"Enter n"<<endl;
+	cin >> n;
+	char ** A = new char *[m];
+	for (int i = 0; i < m;++i)
+	{
+		A[i] = new char[n];
+	}
+	for (int i = 0;i < m;++i)
+	{
+		for (int j = 0;j < n;++j)
+		{
+			cin >> A[i][j];
+		}
+	}
+	cout << endl;
+	for (int i = 0;i < m;++i)
+	{
+		for (int j = 0;j < n;++j)
+		{
+			cout << A[i][j] << "    ";
+		}
+		cout << endl;
+	}
+	cout << endl;
+	for (int i = 0; i < m;++i)
+	{
+		for (int j = 0;j < n;++j)
+		{
+			if (isdigit(A[j][i]))
+			{
+				cout << i <<" ";
+			}
+		}
+	}
+	cout << endl;
+	
+	system("pause");
+}

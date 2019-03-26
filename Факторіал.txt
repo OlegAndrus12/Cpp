@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void main() {
+	int n, a;
+	cout << "Enter n" << endl;
+	cin >> n;
+	int D = 1;
+	for (int i =1; i <= n; ++i)
+	{
+		D *= i;
+	}
+	cout << "n!= " << D << endl;
+	system("pause");
+}
+// програма для обчислення факторіала

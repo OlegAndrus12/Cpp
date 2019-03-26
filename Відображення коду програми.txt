@@ -1,0 +1,21 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+
+using namespace std;
+
+int main() {
+	ifstream in("getline.cpp");// підключились до файлу з кодом і тепер можемо з цим файлом працювати
+	string str; //зіманна, що міститиме код програми із файла
+	unsigned number = 0; // змінна, що підраховує кількість рядків
+	while (getline(in, str)) // функція, що відображає к-сть рядків у коді
+	{
+		++number; // збільшує n(к-сть рядків) до тої к-сті рядків із файлової програми
+		cout << number << ":" << str << endl; // виводжу код програми із файла
+	}
+	cout << "Total" << number << "rows" << endl; // виводжу загальну к-сть рядків програми із файлу;
+	system("pause");
+}
+
+	

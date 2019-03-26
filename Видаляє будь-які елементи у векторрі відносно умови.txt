@@ -1,0 +1,16 @@
+vector<int> vec = { 2,1,31,4,3,5,2,1,0 };
+	int a;
+	int b;
+	cout << "Enter a, b : " << endl;
+	cin >> a >> b;
+	for (auto i = vec.begin(); i != vec.end(); ++i)
+	{
+		cout << *i << " ";
+	}
+	cout << endl;
+	auto it = remove_if(vec.begin(), vec.end(), [=](int x)->bool {return ((a <= x) && (x <= b)); });
+	vec.erase(it,vec.end());
+	for (auto i = vec.begin(); i != vec.end(); ++i)
+	{
+		cout << *i << " ";
+	}

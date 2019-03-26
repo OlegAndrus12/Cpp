@@ -1,0 +1,53 @@
+#include<iostream>
+#include <cmath>
+
+using namespace std;
+
+double poundUA(double x);
+double poundPL(double x);
+
+void main()
+{
+	int choose;
+	double salary;
+	double pound;
+	cout << "Choose country" << endl;
+	cout << "[1] - Ukraine" << "\t\t" << "[2] - Poland" << endl;
+	cin >> choose;
+	switch (choose)
+	{
+
+	case 1:
+	{
+		cout << "Enter your salary" << endl;
+		cin >> salary;
+		pound = poundUA(salary);
+		cout << "Amount of pound: " << pound << endl;
+		cout << "Endly salary: " << salary - pound << endl;
+		break;
+	}
+	case 2:
+	{
+		cout << "Enter your salary" << endl;
+		cin >> salary;
+		pound = poundPL(salary);
+		cout << "Amount of pound: " << pound << endl;
+		cout << "Endly salary: " << salary - pound << endl;
+		break;
+	}
+	default:
+	{
+		cout << "See more attentive to the first row. I'm so sorry, but you make a mistake" << endl;
+		break;
+	}
+	}
+	system("pause");
+}
+double poundUA (double x) 
+{
+	return x	*0.13;
+ }
+double poundPL(double x)
+{
+	return x*0.11;
+}

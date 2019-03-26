@@ -1,0 +1,29 @@
+class Object
+{
+private:
+	int k; // кратність
+	int count; // позиція
+public:
+	Object(int k)
+	{
+		this->k = k;
+		this->count = 0;
+	}
+	void operator()(int x)
+	{
+		if (count % k == 0)
+		{
+			cout << x << " ";
+		}
+		++count;
+	}
+};	
+
+vector<int> vec = { 2,1,31,4,3,5,2,1,0 };
+	
+	for (auto i = vec.begin(); i != vec.end(); ++i)
+	{
+		cout << *i << " ";
+	}
+	cout << endl;
+	for_each(vec.begin(), vec.end(), Object(4)); // виводить елементи, що стоять на позиціях, які кратні заданому числу

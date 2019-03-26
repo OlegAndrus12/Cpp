@@ -1,0 +1,24 @@
+#include<iostream>
+
+using namespace std;
+
+void main() {
+	const int N = 100;
+	double A [N];
+	for (int i = 0; i < N;++i) 
+	{
+		cin >> A[i];
+	}
+	for (int i = 0; i < (N / 2); ++i)
+	{
+		double a;
+		a = A[i];
+		A[i] = A[N - 1 - i];
+		A[N - 1 - i] = a;
+	}
+	for (int i = 0; i < N;++i)
+	{
+		cout << A[i] << endl;
+	}
+	system ("pause");
+}

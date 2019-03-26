@@ -1,0 +1,32 @@
+void my_func(int a)
+{
+	cout << a << " ";
+}
+
+class Func
+{
+public:
+	int operator()(int a, int b)
+	{
+		return (a + b);
+	}
+};
+
+vector<int> vec1 = { 2,1,31,4,3,5,2,1,0 };
+	
+	for (auto i = vec1.begin(); i != vec1.end(); ++i)
+	{
+		cout << *i << " ";
+	}
+	cout << endl;
+	vector<int> vec2 = { 2,1,31,4,3,5,2,1,0 };
+
+	for (auto i = vec2.begin(); i != vec2.end(); ++i)
+	{
+		cout << *i << " ";
+	}
+	cout << endl;
+	vector<int> vec3;
+
+	transform(vec1.begin(), vec1.end(), vec2.begin(), back_inserter(vec3), Func());
+	for_each(vec3.begin(), vec3.end(), my_func);

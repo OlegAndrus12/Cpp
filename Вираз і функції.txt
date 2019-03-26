@@ -1,0 +1,32 @@
+#include<iostream>
+#include <cmath>
+
+using namespace std;
+
+double maximum(double x, double y);
+
+int main()
+{
+	double s;
+	double a, b, c;
+	cout << "Enter a" << endl;
+	cin >> a;
+	cout << "Enter b" << endl;
+	cin >> b;
+	cout << "Enter c" << endl;
+	cin >> c;
+	s = (maximum(a, a + b) + maximum(a, b + c)) / (1 + maximum(a + b*c, 1.15));
+	cout << "s = " << s << endl;
+	system("pause");
+    return 0;
+	
+}
+double maximum(double x, double y)
+{
+	double result;
+	if (x > y)
+		result = x;
+	else
+		result = y;
+	return result;
+}

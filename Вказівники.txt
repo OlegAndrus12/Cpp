@@ -1,0 +1,58 @@
+1)
+#include<iostream>
+
+using namespace std;
+
+int main() {
+	int i = 100;
+	char c = 'A';
+	int *pi = &i;// pi це назва вказівника, '*' та '&' префіксні оператори оголошення, що використовуються у вказівниках.  
+	char *pc = &c;
+	cout << *pi << ' ' << *pc<<endl;
+	system("pause");
+}
+2)
+#include <iostream>
+
+using namespace std;
+void main()
+{
+	int*di = new int(10);
+	double*dd = new double;
+	*dd = 123.456;
+	++ *dd;
+	cout << "di = " << *di << " dd = " << *dd << endl;
+	delete di;
+	delete dd;
+	system("pause");
+}
+3)
+#include <iostream>
+
+using namespace std;
+
+void main()
+{
+	int N;
+	cout << "Enter N" << endl;
+	cin >> N;
+	double* Arr = new double[N];
+	for (int i = 0; i < N; ++i)
+	{
+		cin >> Arr[i];
+	}
+
+	double Sum1 = 0;
+	for (int i = 0;i < N;++i)
+	{
+		Sum1 += Arr[i];
+	}
+	double Sum2 = 0;
+	for (int i = 0;i < N;++i)
+	{
+		Sum2 += *(Arr+i);
+	}
+	cout << "Sum1 = " << Sum1 << " Sum2 = " << Sum2 << endl;
+	delete [] Arr;
+	system("pause");
+}

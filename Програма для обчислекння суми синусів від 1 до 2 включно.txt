@@ -1,0 +1,16 @@
+#include<iostream>
+
+using namespace std;
+ 
+void main() {
+	double a, y;
+	double s = 0;
+	for (a = 1; a <= 2; a += 0.1)
+	{
+		y = sin(a);
+		s += y;
+	}
+	cout << "y= " << s << endl;
+	system("pause");
+}
+// Програма для обчислекння суми синусів від 1 до 2 включно

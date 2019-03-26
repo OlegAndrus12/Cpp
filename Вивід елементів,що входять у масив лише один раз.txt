@@ -1,0 +1,33 @@
+#include<iostream>
+
+using namespace std;
+
+void main() {
+	int N;
+	cout << "Enter N" << endl;
+	cin >> N;
+	int* Penni = new int[N];
+	for (int i = 0;i < N;++i)
+	{
+		cin >> Penni[i];
+	}
+	cout << "Index" << "\t\t" << "Value" << endl;
+	for (int b = 0; b < N; ++b)
+	{
+		cout << "< " << b << " >" << "\t\t" << Penni[b] << endl;
+	}
+	for (int i = 0;i < N;++i)
+	{
+		int c = 0;
+		for (int j = 0;j < N; ++j)
+		{
+			if (Penni[i] == Penni[j])
+				c++;
+		}
+		if (c == 1)
+			cout << Penni[i]<<" "<<endl;
+
+	}
+	system("pause");
+}
+		

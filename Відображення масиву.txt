@@ -1,0 +1,14 @@
+#include<iostream>
+
+using namespace std;
+
+void main() {
+	cout << "obrobka massiva" << endl;
+	int a[16] = { 2,32,321,2,2,5,65,3,6,3,77,5,75,35,-3,-2 };
+	cout << "indeks" << "\t\t" << "element of an array" << endl;
+	for (int i = 0; i < 16; ++i)
+	{
+		cout << "a[" << i << "]" << "\t\t" << a[i] << endl;
+	}
+	system("pause");
+}

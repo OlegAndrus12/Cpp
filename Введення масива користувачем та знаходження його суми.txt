@@ -1,0 +1,26 @@
+##include<iostream>
+
+using namespace std;
+
+void main() {
+	int Penni[12];
+	cout << "Enter elemets of an array" << endl;
+	for (int i = 0; i < 12;++i)
+	{
+		cin >> Penni[i];
+	}
+	cout << "array1 = {";
+	for (int i = 0;i < 12; i++)
+	{
+		cout << Penni[i]<<" ";
+	
+	}
+	int Sum = 0;
+	for (int i = 0; i < 12;++i)
+	{
+		Sum += Penni[i];
+	}
+	cout << "}" << endl;
+	cout << "Sum = " << Sum << endl;
+	system("pause");
+}

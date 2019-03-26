@@ -1,0 +1,48 @@
+#include<iostream>
+
+using namespace std;
+
+void main() {
+	int n;
+	cout << "Enter n" << endl;
+	cin >> n;
+	int* A = new int[n];
+	int* B = new int[n];
+	cout << "Enter A massive" << endl;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> A[i];
+	}
+	cout << endl;
+	cout << "Enter B massive" << endl;
+	for (int i = 0; i < n; i++)
+	{
+		cin >> B[i];
+	}
+
+	int  imin, jmax, min, max;
+	min = A[0];
+	max = B[0];
+	jmax = imin = 0;
+	
+	for (int i = 0; i < n;++i)
+	{
+		
+		if (A[i] < min)
+		{
+			min = A[i];
+			imin = i;
+		}
+		for (int j = 0;j < n;++j)
+		{
+			if (B[j] > max)
+			{
+				max =B[j];
+				jmax = j;
+			}
+		}
+	}
+	cout << "Your pair of numbers, that have the biggest length" << endl;
+	cout << "(" << imin << "," << jmax << ")" << endl;
+	system("pause");
+}

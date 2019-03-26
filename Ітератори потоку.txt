@@ -1,0 +1,6 @@
+vector <int> vec;
+	istream_iterator <int> is1(cin);
+	istream_iterator <int> is2;
+	copy(is1, is2, back_inserter(vec));
+	ostream_iterator <int> ost1(cout, " ");
+	copy(vec.begin(), vec.end(), ost1);

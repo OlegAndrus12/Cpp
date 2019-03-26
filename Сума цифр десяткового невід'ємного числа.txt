@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	unsigned number;
+	cout << "number: ";
+	cin >> number;
+
+	unsigned i = number;
+	unsigned s = 0;
+	do {
+		s += i % 10;
+		i /= 10;
+	} while (i);
+	cout << "number= " << number << " sum of digits= " << s << endl;
+	system("pause");
+}
+
+2)
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+	unsigned number;
+	cout << "number: ";
+	cin >> number;
+
+	unsigned i = number;
+	unsigned s = 0;
+	do {
+		s += i % 10;
+		i /= 10;
+	} while (i);
+	cout << "number= " <<hex<<number << " sum of digits= " << dec << s << endl;
+	system("pause");
+
+}
+¬иводить число у ш≥стнадц€тков≥й систем≥ численн€, а суму чисел вираховуЇ по дес€тков≥й систем≥ численн€.

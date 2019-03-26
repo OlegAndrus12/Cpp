@@ -1,0 +1,70 @@
+#include<iostream>
+#include <cmath>
+
+using namespace std;
+
+void main()
+{
+	const int rows = 7;
+	const int columns = 7;
+	double minrows;
+	int irows;
+	double maxcolumns;
+	int icolumns;
+	double A[rows][columns];
+	for (int i = 0;i < rows;++i)
+	{
+		for (int j = 0;j < columns;++j)
+		{
+			cout << "A[" << i << "]" << "[" << j << "]" << endl;
+			cin >> A[i][j];
+		}
+	}
+	cout << endl;
+	for (int i = 0;i < rows;++i)
+	{
+		for (int j = 0; j < columns;++j)
+		{
+			cout << A[i][j] << "    ";
+		}
+		cout << endl;
+	}
+
+	
+	for (int i = 0;i < rows;++i)
+	{
+		minrows = A[0][0];
+		maxcolumns = A[0][0];
+		irows = 0;
+		icolumns = 0;
+		for (int j = 0;j < columns;++j)
+		{
+			if (A[i][j] < minrows)
+			{
+				minrows = A[i][j];
+				irows = i;
+			}
+			if (A[i][j] > maxcolumns)
+			{
+				maxcolumns = A[i][j];
+				icolumns = j;
+			}
+		}
+
+	}
+	cout << "minrows = " << minrows << " maxcolumns = " << maxcolumns << endl;
+	cout << "irows = " << irows << " icolumns = " << icolumns << endl;
+	double Sdob =0;
+	double y;
+	for (int i = 0;i < rows;++i)
+	{
+			y = A[irows][i] * A[i][icolumns];
+			Sdob += y;
+}
+	cout << "Sdob = " << Sdob << endl;
+	system("pause");
+
+}
+
+
+	

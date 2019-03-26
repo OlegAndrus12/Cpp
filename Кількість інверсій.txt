@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void main()
+{
+	int N;
+	cout << "Enter n" << endl;
+	cin >> N;
+	int* A = new int[N];
+	int c = 0;
+	for (int i = 0;i < N;++i)
+	{
+		cin >> A[i];	
+	}
+	cout << endl;
+	for (int i = 0;i < N;++i)
+	{
+		c = 0;
+		for (int j = 0; j < N;++j)
+		{
+			if (A[j] > A[i])
+				c++;
+	 }
+	}
+	cout << endl;
+	cout << "Number of invertions = " << c << endl;
+	system("pause");
+}

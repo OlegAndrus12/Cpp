@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+
+void main() {
+	int i = 1;
+	double E, x, m, y;
+	double S = 0;
+	//double S1 = 0;
+	cout << "Enter E" << endl;
+	cin >> E;
+	cout << "Enter x" << endl;
+	cin >> x;
+	cout << " Enter m" << endl;
+	cin >> m;
+	y = m*x;
+	while (abs(y) < E)
+	{
+		S += y;
+		y = y*((((m - 1)*x)) / ((i + 1)*(m - i + 1)));
+		++i;
+	
+	}
+	/*++S;
+	S1 = S;
+	*/
+	cout << "(1 + x) ^ m = " << ++S << endl;
+	system("pause");
+}

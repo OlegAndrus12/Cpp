@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+void main()
+{
+	double u, v, u0, v0, u1,v1;
+	int n;
+	u0 = 0;
+	v0 = 1;
+	u1 = -0, 5;
+	v1 = -1 / 3;
+	int i = 4;
+	cout << "Enter n" << endl;
+	cin >> n;
+	if (n == 3)
+	{
+		cout << "v= " << v1 << endl;
+	}
+	else
+	{
+		while (i <= n)
+		{
+			u = (u1 - u0*v1 - v0) / (1 + u1*u1 + v1*v1);
+			v = (u1 - v1) / (abs(u0 + v1) + 2);//×è º ð³çíèöÿ ì³æ abs i fabs?
+			u0 = u1;
+			u1 = u;
+			v0 = v1;
+			v1 = v;
+			++i;
+		
+		}
+	}
+	cout << "v= " << v << endl;
+	system("pause");
+
+}
